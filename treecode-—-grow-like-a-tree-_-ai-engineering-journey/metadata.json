@@ -1,0 +1,6 @@
+{
+  "name": "TreeCode — Grow Like a Tree | AI Engineering Journey",
+  "description": "Official TreeCode platform and AI Engineering learning portfolio by Umar Mehmood. Features project showcase, structured learning roadmap, Try Tree AI chat preview, and developer environment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

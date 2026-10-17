@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #080d0a;
+    color: #e5f2eb;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080d0a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #192b20;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #10b981;
+  }
+}
+
+/* Light mode overrides when class 'light' is on html/body */
+.light body,
+.light {
+  background-color: #f7faf8 !important;
+  color: #0f2419 !important;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #f0f7f3;
+}
+.light ::-webkit-scrollbar-thumb {
+  background: #a3c9b4;
+}
+
+/* Glassmorphism and emerald subtle glow effects */
+.forest-glass {
+  background: rgba(13, 20, 16, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.12);
+}
+
+.light .forest-glass {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(5, 150, 105, 0.18);
+}
+
+.emerald-glow {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25);
+}
+
+.emerald-glow-sm {
+  box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.2);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
